@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import Item
 
-# Register your models here.
+
+@admin.register(Item)
+class ItemAdmin(admin.ModelAdmin):
+    list_display = ["id", "title", "desc", "curent_sale", "is_active", "image_tag"]
+    list_display_links = ["id", "title"]
+    search_fields = ["id", "title", "curent_sale", "is_active"]
