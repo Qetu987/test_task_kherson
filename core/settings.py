@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'index',
     'sales',
     'items',
+
+    'annoying',
 ]
 
 MIDDLEWARE = [
