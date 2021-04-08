@@ -4,44 +4,30 @@
 	
 
 			{% block header %}
-				<div class="display_center">
-					<div class="page_contant">
-						{% include "include/header.html" %}
-					</div>
+			<div class="display_center">
+				<div class="page_contant">
+					{% include "include/header.html" %}
 				</div>
+			</div>
 			{% endblock %}
 
 
 			{% block main_block %}
 			<div class="display_center">
 				<div class="page_contant">
-					{% include "include/main_block.html" %}
+					{% include "include/crumb.html" %}
 				</div>
 			</div>
-				
 			{% endblock %}
 
 
 			{% block category2 %}
 			<div class="display_center">
 				<div class="page_contant">
-					{% include "include/carusel.html" %}
+					{% include "include/item_grid.html" %}
 				</div>
 			</div>
-				
 			{% endblock %}
-
-
-			{% block category1 %}
-			<div class="display_center">
-				<div class="page_contant">
-					{% include "include/carusel.html" %}
-				</div>
-			</div>
-				
-			{% endblock %}
-
-
 
 {% block footer %}
 	{% include "include/footer.html" %}

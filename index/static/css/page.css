@@ -1,0 +1,156 @@
+/* тут у нас все что касается основных настроечек страницы */
+
+
+h1, p, body, input{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+div.page_contant{
+	width: 1110px;
+}
+
+div.display_center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div.display_flex_between{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+.svg_icon{
+	height: 24px;
+	width: 24px;
+}
+
+/* header */
+
+div.block_header{
+	margin-top: 16px;
+
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+
+	margin-bottom: 32px;
+}
+
+/* end header */
+
+/* block menu */
+
+div.block_of_menu_for_xl_and_md{
+	display: block;
+}
+
+div.block_of_menu_for_sm{
+	display: none;
+}
+
+
+div.block_of_menu{
+	display: flex;
+	justify-content: space-between;
+}
+
+div.menu_block{
+	width: 350px;
+	background-color: #3A3A3A;
+
+	border-radius: 32px;
+
+	display: block;
+}
+
+div.menu_block_contant{
+	width: 302px;
+	padding: 24px;
+}
+
+
+/* end menu block */
+
+
+.mrgin_100{
+	margin-top: 100px;
+}
+
+/* footer */
+
+
+div.main_item_of_menu{
+	
+
+	height: 372px;
+	width: 730px;
+
+	background-color: #E4EAF2;
+	border-radius: 32px;
+
+	display: flex;
+
+}
+
+
+div.block_footer{
+	height: 246px;
+	width: 100%;
+	background: #3A3A3A;
+	border-radius: 32px 32px 0px 0px;
+}
+
+/* end footer */
+
+
+
+
+.itemitem{
+	display: none;
+}
+
+
+a, a:visited {
+    color: #33739E;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+a:hover {
+    text-decoration: none;
+}
+#loadMore {
+    padding: 10px;
+    text-align: center;
+	width: 300px;
+	height: 30px !important;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+    color: #232323;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #232323;
+    box-shadow: 0 1px 1px #ccc;
+    transition: all 600ms ease-in-out;
+    -webkit-transition: all 600ms ease-in-out;
+    -moz-transition: all 600ms ease-in-out;
+    -o-transition: all 600ms ease-in-out;
+}
+#loadMore:hover {
+    background-color: #33739E;
+    color: #fff;
+}

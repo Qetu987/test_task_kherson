@@ -1,0 +1,46 @@
+div.catalog_crumb{
+	margin-top: 32px;
+	margin-bottom: 32px;
+	display: flex;
+}
+
+p.catalog_crumb{
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 11px;
+	line-height: 13px;
+	/* identical to box height */
+
+
+	/* MiddleGrey */
+
+	color: #A1A1A1;
+
+	margin-right: 8px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 30px 30px;
+  grid-template-areas:
+    ". . .";
+}
+
+h1.grid_title{
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 26px;
+	/* identical to box height */
+
+
+	/* MainDark */
+
+	color: #3A3A3A;
+
+	margin-bottom: 32px;
+}

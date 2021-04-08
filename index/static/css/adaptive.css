@@ -1,0 +1,173 @@
+/* сюда пихаю адаптив для страницы  */
+
+
+@media screen and (max-width: 1200px){
+	div.block_of_menu_for_xl_and_md{
+		display: block;
+	}
+
+	div.block_of_menu_for_sm{
+		display: none;
+	}
+
+
+	div.page_contant{
+		width: 690px;
+		/* change */
+	}
+
+
+	div.menu_block{
+		display: none;
+		/* change */
+
+	}
+
+	.header_search_block{
+		overflow: hidden;
+		display: none;
+		/* change */
+	}
+
+
+	a.search_button{
+		display: block;
+
+		/* change */
+	}
+
+
+
+	div.main_item_of_menu_right{
+		width: 330px;
+		}
+
+	div.main_item_of_menu_left{
+		width: 330px;
+		
+	}
+
+
+
+
+	div.multiple_items_xl{
+		display: none;
+	}
+
+	div.multiple_items_md{
+		display: block;
+	}
+
+	div.multiple_items_sm{
+		display: none;
+	}
+
+
+
+
+
+
+
+	.grid-container {
+	  display: grid;
+	  grid-template-columns: 1fr 1fr;
+	  grid-template-rows: 1fr;
+	  gap: 30px 30px;
+	  grid-template-areas:
+	    ". .";
+	}
+
+}
+
+@media screen and (max-width: 768px){
+	div.block_of_menu_for_xl_and_md{
+		display: none;
+	}
+
+	div.block_of_menu_for_sm{
+		display: block;
+	}
+
+	div.page_contant{
+		width: 343px;
+	}
+
+
+	div.menu_block{
+		width: 350px;
+	}
+
+	div.main_item_of_menu{
+
+		height: auto;
+		width: 530px;
+
+
+		display: block;
+	}
+
+
+	div.main_item_of_menu_left{
+		width: 350px;
+		margin-right: 0px;
+		/**/
+		height: auto;
+		/**/
+	}
+
+
+	div.main_item_of_menu_right{
+		width: 350px;
+		height: 372px;
+	}
+
+	h1.main_item_of_menu_left_title{
+		
+		margin-left: 16px;
+		/*change*/
+		margin-top: 16px;
+		/**/
+		margin-bottom: 24px;
+	}
+
+	p.main_item_of_menu_left_desc{
+		margin-left: 16px;
+		margin-bottom: 20px;
+		width: 314px;
+	}
+
+	div.main_item_of_menu_left_bottom_nav{
+		position: static;
+		margin-bottom: 16px;
+		margin-left: 16px;
+
+	}
+
+
+
+	div.multiple_items_xl{
+		display: none;
+	}
+
+	div.multiple_items_md{
+		display: none;
+	}
+
+	div.multiple_items_sm{
+		display: block;
+	}
+	
+
+
+
+
+	.grid-container {
+	  display: grid;
+	  grid-template-columns: 1fr;
+	  grid-template-rows: 1fr;
+	  gap: 30px 30px;
+	  grid-template-areas:
+	    ".";
+	}
+
+}

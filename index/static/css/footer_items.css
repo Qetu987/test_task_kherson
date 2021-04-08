@@ -1,0 +1,50 @@
+/* футер пишем тут */
+
+
+div.footer_menu_block{
+	margin-top: 64px;
+}
+
+h1.footer_menu_block{
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	line-height: 29px;
+
+	color: #FFFFFF;
+
+	margin-bottom: 8px;
+}
+
+p.footer_menu_block{
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	/* identical to box height */
+
+
+	color: #FFFFFF;
+
+	margin-top: 8px;
+}
+
+p.footer_menu_block:hover{
+	color: #cdcdcd;
+}
+
+div.footer_menu_block_nav{
+	display: flex;
+	justify-content: space-between;
+	width: 400px;
+
+}
+
+div.footer_social_media{
+	width: 136px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

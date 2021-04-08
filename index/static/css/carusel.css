@@ -1,0 +1,120 @@
+/* тут живут карусели */
+
+
+div.multiple_items_xl{
+	display: block;
+}
+
+div.multiple_items_md{
+	display: none;
+}
+
+div.multiple_items_sm{
+	display: none;
+}
+
+
+h1.title_of_carusel{
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 26px;
+
+	color: #3A3A3A;
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+
+div.field_of_carusel{
+	width: 100%;
+}
+
+div.carusel_item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div.flex_space_between{
+	
+}
+
+div.carusel_items_field{
+	width: 350px;
+	height: 422px;
+}
+div.carusel_items_photo{
+	width: 350px;
+	height: 350px;
+
+	background-color: #FCFDFF;
+	border-radius: 32px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+img.carusel_items_photo{
+	height: 320px;
+	width: 320px;
+}
+
+div.carusel_item_desc{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+div.carusel_item_desc_left{
+	margin-left: 12px;
+}
+
+h1.carusel_item_desc_title{
+	margin-top: 16px;
+
+	width: 250px;
+
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+	/* identical to box height */
+
+
+	color: #3A3A3A;
+}
+
+p.carusel_item_desc_category{
+	margin-top: 8px;
+
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	/* identical to box height */
+
+	color: #5F5F5F;
+}
+
+div.carusel_item_desc_right{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-right: 12px;
+}
+
+p.carusel_item_desc_price{
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 26px;
+	text-align: right;
+
+	color: #3A3A3A;
+}
