@@ -8,86 +8,33 @@
 		    		<!-- немного говнокода -->
 
 					<div class="multiple_items_xl">
-		    			<div class="carusel_item">
-		    				<div class="carusel_items_field">
-		    					<div class="carusel_items_photo">
-		    						<img src="{% static 'images/item.png' %}" alt="" class="carusel_items_photo">
-		    					</div>
-		    					<div class="carusel_item_desc">
-		    						<div class="carusel_item_desc_left">
-		    							<h1 class="carusel_item_desc_title">
-		    								Универсальная батарея Xiaomi Mi Powerbank 2 
-		    							</h1>
-		    							<p class="carusel_item_desc_category">
-		    								Телефоны и аксессуары
-		    							</p>
-		    						</div>
-		    						<div class="carusel_item_desc_right">
-		    							<p class="carusel_item_desc_price">2350 грн.</p>
-		    						</div>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="carusel_item">
-		    				<div class="carusel_items_field">
-		    					<div class="carusel_items_photo">
-		    						<img src="{% static 'images/item.png' %}" alt="" class="carusel_items_photo">
-		    					</div>
-		    					<div class="carusel_item_desc">
-		    						<div class="carusel_item_desc_left">
-		    							<h1 class="carusel_item_desc_title">
-		    								Универсальная батарея Xiaomi Mi Powerbank 2 
-		    							</h1>
-		    							<p class="carusel_item_desc_category">
-		    								Телефоны и аксессуары
-		    							</p>
-		    						</div>
-		    						<div class="carusel_item_desc_right">
-		    							<p class="carusel_item_desc_price">350 грн.</p>
-		    						</div>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="carusel_item">
-		    				<div class="carusel_items_field">
-		    					<div class="carusel_items_photo">
-		    						<img src="{% static 'images/item.png' %}" alt="" class="carusel_items_photo">
-		    					</div>
-		    					<div class="carusel_item_desc">
-		    						<div class="carusel_item_desc_left">
-		    							<h1 class="carusel_item_desc_title">
-		    								Универсальная батарея Xiaomi Mi Powerbank 2 
-		    							</h1>
-		    							<p class="carusel_item_desc_category">
-		    								Телефоны и аксессуары
-		    							</p>
-		    						</div>
-		    						<div class="carusel_item_desc_right">
-		    							<p class="carusel_item_desc_price">350 грн.</p>
-		    						</div>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="carusel_item">
-		    				<div class="carusel_items_field">
-		    					<div class="carusel_items_photo">
-		    						<img src="{% static 'images/item.png' %}" alt="" class="carusel_items_photo">
-		    					</div>
-		    					<div class="carusel_item_desc">
-		    						<div class="carusel_item_desc_left">
-		    							<h1 class="carusel_item_desc_title">
-		    								Универсальная батарея Xiaomi Mi Powerbank 2 
-		    							</h1>
-		    							<p class="carusel_item_desc_category">
-		    								Телефоны и аксессуары
-		    							</p>
-		    						</div>
-		    						<div class="carusel_item_desc_right">
-		    							<p class="carusel_item_desc_price">350 грн.</p>
-		    						</div>
-		    					</div>
-		    				</div>
-		    			</div>
+						{% for item in items %}
+							{% if item.is_second_carusel %}
+							<a href="{{ item.get_absolute_url }}">
+								<div class="carusel_item">
+									<div class="carusel_items_field">
+										<div class="carusel_items_photo">
+											<img src="{{item.image.url}}" alt="" class="carusel_items_photo">
+										</div>
+										<div class="carusel_item_desc">
+											<div class="carusel_item_desc_left">
+												<h1 class="carusel_item_desc_title">
+													{{ item.title }} 
+												</h1>
+												<p class="carusel_item_desc_category">
+													{{ item.desc }}
+												</p>
+											</div>
+											<div class="carusel_item_desc_right">
+												<p class="carusel_item_desc_price">{{item.curent_sale}} грн</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+							{% endif %}
+		    			{% endfor %}
+		    			
 		    		</div>
 
 		    		<!-- конец карусели для компа -->
@@ -100,86 +47,32 @@
 		    		<!-- немного говнокода -->
 
 		    		<div class="multiple_items_md">
-		    			<div class="carusel_item">
-		    				<div class="carusel_items_field">
-		    					<div class="carusel_items_photo">
-		    						<img src="{% static 'images/item.png' %}" alt="" class="carusel_items_photo">
-		    					</div>
-		    					<div class="carusel_item_desc">
-		    						<div class="carusel_item_desc_left">
-		    							<h1 class="carusel_item_desc_title">
-		    								Универсальная батарея Xiaomi Mi Powerbank 2 
-		    							</h1>
-		    							<p class="carusel_item_desc_category">
-		    								Телефоны и аксессуары
-		    							</p>
-		    						</div>
-		    						<div class="carusel_item_desc_right">
-		    							<p class="carusel_item_desc_price">2350 грн.</p>
-		    						</div>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="carusel_item">
-		    				<div class="carusel_items_field">
-		    					<div class="carusel_items_photo">
-		    						<img src="{% static 'images/item.png' %}" alt="" class="carusel_items_photo">
-		    					</div>
-		    					<div class="carusel_item_desc">
-		    						<div class="carusel_item_desc_left">
-		    							<h1 class="carusel_item_desc_title">
-		    								Универсальная батарея Xiaomi Mi Powerbank 2 
-		    							</h1>
-		    							<p class="carusel_item_desc_category">
-		    								Телефоны и аксессуары
-		    							</p>
-		    						</div>
-		    						<div class="carusel_item_desc_right">
-		    							<p class="carusel_item_desc_price">350 грн.</p>
-		    						</div>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="carusel_item">
-		    				<div class="carusel_items_field">
-		    					<div class="carusel_items_photo">
-		    						<img src="{% static 'images/item.png' %}" alt="" class="carusel_items_photo">
-		    					</div>
-		    					<div class="carusel_item_desc">
-		    						<div class="carusel_item_desc_left">
-		    							<h1 class="carusel_item_desc_title">
-		    								Универсальная батарея Xiaomi Mi Powerbank 2 
-		    							</h1>
-		    							<p class="carusel_item_desc_category">
-		    								Телефоны и аксессуары
-		    							</p>
-		    						</div>
-		    						<div class="carusel_item_desc_right">
-		    							<p class="carusel_item_desc_price">350 грн.</p>
-		    						</div>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="carusel_item">
-		    				<div class="carusel_items_field">
-		    					<div class="carusel_items_photo">
-		    						<img src="{% static 'images/item.png' %}" alt="" class="carusel_items_photo">
-		    					</div>
-		    					<div class="carusel_item_desc">
-		    						<div class="carusel_item_desc_left">
-		    							<h1 class="carusel_item_desc_title">
-		    								Универсальная батарея Xiaomi Mi Powerbank 2 
-		    							</h1>
-		    							<p class="carusel_item_desc_category">
-		    								Телефоны и аксессуары
-		    							</p>
-		    						</div>
-		    						<div class="carusel_item_desc_right">
-		    							<p class="carusel_item_desc_price">350 грн.</p>
-		    						</div>
-		    					</div>
-		    				</div>
-		    			</div>
+		    			{% for item in items %}
+							{% if item.is_second_carusel %}
+							<a href="">
+								<div class="carusel_item">
+									<div class="carusel_items_field">
+										<div class="carusel_items_photo">
+											<img src="{{item.image.url}}" alt="" class="carusel_items_photo">
+										</div>
+										<div class="carusel_item_desc">
+											<div class="carusel_item_desc_left">
+												<h1 class="carusel_item_desc_title">
+													{{ item.title }} 
+												</h1>
+												<p class="carusel_item_desc_category">
+													{{ item.desc }}
+												</p>
+											</div>
+											<div class="carusel_item_desc_right">
+												<p class="carusel_item_desc_price">{{item.curent_sale}} грн</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+							{% endif %}
+		    			{% endfor %}
 		    		</div>
 
 		    		<!-- конец карусели для планшета -->
@@ -189,86 +82,32 @@
 		    		<!-- немного говнокода -->
 
 		    		<div class="multiple_items_sm">
-		    			<div class="carusel_item">
-		    				<div class="carusel_items_field">
-		    					<div class="carusel_items_photo">
-		    						<img src="{% static 'images/item.png' %}" alt="" class="carusel_items_photo">
-		    					</div>
-		    					<div class="carusel_item_desc">
-		    						<div class="carusel_item_desc_left">
-		    							<h1 class="carusel_item_desc_title">
-		    								Универсальная батарея Xiaomi Mi Powerbank 2 
-		    							</h1>
-		    							<p class="carusel_item_desc_category">
-		    								Телефоны и аксессуары
-		    							</p>
-		    						</div>
-		    						<div class="carusel_item_desc_right">
-		    							<p class="carusel_item_desc_price">2350 грн.</p>
-		    						</div>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="carusel_item">
-		    				<div class="carusel_items_field">
-		    					<div class="carusel_items_photo">
-		    						<img src="{% static 'images/item.png' %}" alt="" class="carusel_items_photo">
-		    					</div>
-		    					<div class="carusel_item_desc">
-		    						<div class="carusel_item_desc_left">
-		    							<h1 class="carusel_item_desc_title">
-		    								Универсальная батарея Xiaomi Mi Powerbank 2 
-		    							</h1>
-		    							<p class="carusel_item_desc_category">
-		    								Телефоны и аксессуары
-		    							</p>
-		    						</div>
-		    						<div class="carusel_item_desc_right">
-		    							<p class="carusel_item_desc_price">350 грн.</p>
-		    						</div>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="carusel_item">
-		    				<div class="carusel_items_field">
-		    					<div class="carusel_items_photo">
-		    						<img src="{% static 'images/item.png' %}" alt="" class="carusel_items_photo">
-		    					</div>
-		    					<div class="carusel_item_desc">
-		    						<div class="carusel_item_desc_left">
-		    							<h1 class="carusel_item_desc_title">
-		    								Универсальная батарея Xiaomi Mi Powerbank 2 
-		    							</h1>
-		    							<p class="carusel_item_desc_category">
-		    								Телефоны и аксессуары
-		    							</p>
-		    						</div>
-		    						<div class="carusel_item_desc_right">
-		    							<p class="carusel_item_desc_price">350 грн.</p>
-		    						</div>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="carusel_item">
-		    				<div class="carusel_items_field">
-		    					<div class="carusel_items_photo">
-		    						<img src="{% static 'images/item.png' %}" alt="" class="carusel_items_photo">
-		    					</div>
-		    					<div class="carusel_item_desc">
-		    						<div class="carusel_item_desc_left">
-		    							<h1 class="carusel_item_desc_title">
-		    								Универсальная батарея Xiaomi Mi Powerbank 2 
-		    							</h1>
-		    							<p class="carusel_item_desc_category">
-		    								Телефоны и аксессуары
-		    							</p>
-		    						</div>
-		    						<div class="carusel_item_desc_right">
-		    							<p class="carusel_item_desc_price">350 грн.</p>
-		    						</div>
-		    					</div>
-		    				</div>
-		    			</div>
+		    			{% for item in items %}
+							{% if item.is_second_carusel %}
+							<a href="">
+								<div class="carusel_item">
+									<div class="carusel_items_field">
+										<div class="carusel_items_photo">
+											<img src="{{item.image.url}}" alt="" class="carusel_items_photo">
+										</div>
+										<div class="carusel_item_desc">
+											<div class="carusel_item_desc_left">
+												<h1 class="carusel_item_desc_title">
+													{{ item.title }} 
+												</h1>
+												<p class="carusel_item_desc_category">
+													{{ item.desc }}
+												</p>
+											</div>
+											<div class="carusel_item_desc_right">
+												<p class="carusel_item_desc_price">{{item.curent_sale}} грн</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+							{% endif %}
+		    			{% endfor %}
 		    		</div>
 
 		    		<!-- конец карусели для телефон -->

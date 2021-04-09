@@ -12,6 +12,9 @@ class Item(models.Model):
     image = models.ImageField(upload_to='item_images', blank=True, null=True)
     curent_sale = models.CharField(max_length=150, blank=True)
     is_active = models.BooleanField(default=False)
+    is_first_carusel = models.BooleanField(default=False)
+    is_second_carusel = models.BooleanField(default=False)
+    is_top_item = models.BooleanField(default=False)
 
 
     def __str__(self):

@@ -16,7 +16,7 @@
 										<img src="{% static 'images/menu/tabler_phone.svg' %}" alt="" class="svg_icon">
 
 										<p class="menu_block_contant_menu_element">
-											Телефоны и аксессуары
+											category 1
 										</p>
 										
 									</div>
@@ -26,7 +26,7 @@
 									<div class="menu_block_contant_menu_element">
 										<img src="{% static 'images/menu/tabler_device-laptop.svg' %}" alt="" class="svg_icon">
 										<p class="menu_block_contant_menu_element">
-											Компьютеры и оргтехника
+											category 2
 										</p>
 										
 									</div>
@@ -36,7 +36,7 @@
 									<div class="menu_block_contant_menu_element">
 										<img src="{% static 'images/menu/tabler_scooter-electric.svg' %}" alt="" class="svg_icon">
 										<p class="menu_block_contant_menu_element">
-											Электроника
+											category 3
 										</p>
 										
 									</div>
@@ -46,7 +46,7 @@
 									<div class="menu_block_contant_menu_element">
 										<img src="{% static 'images/menu/tabler_device-tv.svg' %}" alt="" class="svg_icon">
 										<p class="menu_block_contant_menu_element">
-											Бытовая техника
+											category 4
 										</p>
 										
 									</div>
@@ -56,7 +56,7 @@
 									<div class="menu_block_contant_menu_element">
 										<img src="{% static 'images/menu/tabler_hanger.svg' %}" alt="" class="svg_icon">
 										<p class="menu_block_contant_menu_element">
-											Одежда
+											category 5
 										</p>
 										
 									</div>
@@ -68,15 +68,14 @@
 					<div class="main_item_of_menu">
 						<div class="main_item_of_menu_left">
 							<h1 class="main_item_of_menu_left_title">
-								Xiaomi Mi Powerbank 2
+								{{ top_item.title }}
 							</h1>
 							<p class="main_item_of_menu_left_desc">
-								Второе поколение Xiaomi Mi Powerbank имеет емкость 10000 мАч, а скорость зарядки заметно возросла. Классическое оформление и минималистский дизайн все так же хорошо подчеркивают уникальный стиль, а небольшой вес устройства позволит взять его на и работу и в путешествие.
-
+								{{ top_item.desc }}
 							</p>
 							<div class="main_item_of_menu_left_bottom_nav">
 								<p class="main_item_of_menu_left_bottom_nav_price">
-									350 грн
+									{{ top_item.curent_sale }} грн
 								</p>
 
 								<a href="">
@@ -87,7 +86,7 @@
 							</div>
 						</div>
 						<div class="main_item_of_menu_right">
-							<img src="{% static 'images/item.png' %}" alt="item" class="main_item_of_menu_right">
+							<img src="{{ top_item.image.url }}" alt="item" class="main_item_of_menu_right">
 						</div>
 					</div>
 				</div>

@@ -18,13 +18,14 @@ from django.conf import settings
 from django.urls import path, include
 from django.conf.urls.static import static
 
-from index.views import index, catalog
+from index.views import index, catalog, item_detail
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('catalog/', catalog, name='catalog'),
+    path('<slug:slug>', item_detail, name='item_detail'),
 ]
 
 if settings.DEBUG:
