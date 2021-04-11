@@ -23,15 +23,24 @@
 						<img src="{% static 'images/tabler_search.svg' %}" alt="" class="svg_icon header_logining_nav">
 					</a>
 
-					<a href="">
-						<img src="{% static 'images/logining/tabler_user.svg' %}" alt="" class="svg_icon header_logining_nav">
-					</a>
-					<a href="">
-						<img src="{% static 'images/logining/tabler_shopping-cart.svg' %}" alt="" class="svg_icon header_logining_nav">
-					</a>
-					<a href="">
-						<img src="{% static 'images/logining/tabler_logout.svg' %}" alt="" class="svg_icon header_logining_nav">
-					</a>
+					
+					{% if user.is_authenticated %}
+						<a href="">
+							<img src="{% static 'images/logining/tabler_user.svg' %}" alt="" class="svg_icon header_logining_nav">
+						</a>
+
+						<a href="{% url 'logout' %}">
+							<img src="{% static 'images/logining/tabler_logout.svg' %}" alt="" class="svg_icon header_logining_nav">
+						</a>
+					{% else %}
+						<a href="{% url 'login' %}">
+							<img src="{% static 'images/logining/login.svg' %}" alt="" class="svg_icon header_logining_nav">
+						</a>
+					{% endif %}
+
+
+
+					
 				</div>
 			</div>
 
