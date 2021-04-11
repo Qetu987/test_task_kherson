@@ -154,3 +154,89 @@ a:hover {
     background-color: #33739E;
     color: #fff;
 }
+
+
+
+div.item_page{
+	display: flex;
+}
+
+img.curent_items_photo{
+	height: 320px;
+	width: 320px;
+	border-radius: 16px;
+}
+
+
+div.item_info{
+	margin-left: 32px;
+	background-color: #e5e5e5;
+	width: calc(100% - 352px);
+	border-radius: 16px;
+	position: relative;
+}
+
+h1.item_info{
+	margin: 16px;
+	font-size: 34px;
+	color: #232323;
+	width: calc(100% - 32px);
+
+}
+
+p.item_info_title{
+	margin-left: 16px;
+	font-size: 16px;
+	color: #232323;
+	width: calc(100% - 32px);
+}
+
+p.item_info{
+	margin-left: 16px;
+	margin-top: 8px;
+	font-size: 16px;
+	color: #a1a1a1;
+	width: calc(100% - 32px);
+}
+
+p.item_info_price{
+	position: absolute;
+	bottom: 16px;
+	right: 16px;
+	font-weight: 700;
+	font-size: 34px;
+	color: #232323;
+
+	position: absolute;
+	bottom: 64px;
+	left: 16px;
+}
+
+
+
+
+form.form_item{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	position: absolute;
+	bottom: 16px;
+	right: 16px;
+
+	width: calc(100% - 32px);
+}
+
+input.item_button_buy{
+	height: 40px;
+	width: 150px;
+	border: none;
+	background-color: #33739E;
+
+	border-radius: 4px;
+
+	color: #E4EAF2;
+
+	cursor: pointer
+
+}

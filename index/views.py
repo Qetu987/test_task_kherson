@@ -1,5 +1,6 @@
 from annoying.decorators import render_to
 from items.models import Item
+from .form import SaleForm
 
 
 @render_to('index.html')
@@ -18,4 +19,19 @@ def catalog(request):
 @render_to('item_detail.html')
 def item_detail(request, slug):
     item = Item.objects.get(title=slug)
-    return {'items': item}
+    items = Item.objects.all()
+    
+    if request.method == 'POST':
+        sale_form = SaleForm(data=request.POST)
+        if sale_form.is_valid():
+            new_sale = sale_form.save(commit=False)
+            new_sale.item = item
+            print(new_sale)
+            new_sale.save()
+    else:
+        sale_form = SaleForm()
+        print('dodya')
+
+    return {'item': item,
+            'items': items,
+            'sale_form': sale_form}
