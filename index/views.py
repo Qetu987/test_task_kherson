@@ -1,5 +1,6 @@
 from annoying.decorators import render_to
 from items.models import Item
+from sales.models import Sale
 from .form import SaleForm
 
 
@@ -26,12 +27,16 @@ def item_detail(request, slug):
         if sale_form.is_valid():
             new_sale = sale_form.save(commit=False)
             new_sale.item = item
-            print(new_sale)
             new_sale.save()
     else:
         sale_form = SaleForm()
-        print('dodya')
 
     return {'item': item,
             'items': items,
             'sale_form': sale_form}
+
+
+@render_to('sales.html')
+def sales(request):
+    sales = Sale.objects.all().order_by('-date')
+    return {'sales': sales}

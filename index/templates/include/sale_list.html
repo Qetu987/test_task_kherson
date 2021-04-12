@@ -1,0 +1,39 @@
+{% load mathfilters %}
+
+    
+
+{% if user.is_authenticated %}
+    {% for sale in sales %}
+        <div class="sale_field">
+            <div class="sale_field_left">
+                <a href="{{ sale.item.get_absolute_url }}">
+                    <img src="{{ sale.item.image.url }}" alt="" class="sale_field_left">
+                </a>
+            </div>
+            <div class="sale_field_about">
+                <h1 class="sale_field_about">{{sale.item}}</h1>
+                <div class="sale_field_about_field">
+                    <p class="sale_field_about_price">цена {{sale.item.curent_sale}} $</p>
+                    <p class="sale_field_about_count">количество {{sale.count}} шт</p>
+                </div>
+            </div>
+            <div class="sale_field_vender">
+                <h1 class="sale_field_vender">{{sale.user.username}}</h1>
+                <p class="sale_field_vender">{{sale.date}}</p>
+            </div>
+            
+            <div class="sale_field_final_price">
+                <h1 class="sale_field_final_price">{{ sale.item.curent_sale|mul:sale.count }}</h1>
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <div class="sign_in_text">
+        <h1>Для просмотра продаж, пройдите авторизацию</h1>
+    </div>
+    
+{% endif %}
+
+
+    
+

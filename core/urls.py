@@ -18,7 +18,7 @@ from django.conf import settings
 from django.urls import path, include
 from django.conf.urls.static import static
 
-from index.views import index, catalog, item_detail
+from index.views import index, catalog, item_detail, sales
 
 
 urlpatterns = [
@@ -27,6 +27,7 @@ urlpatterns = [
     path('catalog/', catalog, name='catalog'),
     path('catalog/', include('index.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('sales/', sales, name='sales')
 ]
 
 if settings.DEBUG:

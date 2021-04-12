@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block header %}
+	<div class="display_center">
+		<div class="page_contant">
+			{% include "include/header.html" %}
+		</div>
+	</div>
+{% endblock %}
+
+
+
+
+{% block category2 %}
+	<div class="display_center">
+		<div class="page_contant">
+			{% include "include/sale_list.html" %}
+		</div>
+    </div>
+{% endblock %}
+
+
+
+
+{% block footer %}
+	{% include "include/footer.html" %}
+{% endblock %}

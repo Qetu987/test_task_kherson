@@ -8,6 +8,7 @@ h1, p, body, input{
 
 a{
 	text-decoration: none;
+	margin: 0;
 }
 
 
@@ -125,7 +126,7 @@ a, a:visited {
     color: #33739E;
     text-decoration: none;
     display: block;
-    margin: 10px 0;
+    margin: 0 0;
 }
 a:hover {
     text-decoration: none;
@@ -231,14 +232,10 @@ input.item_button_buy{
 	height: 40px;
 	width: 150px;
 	border: none;
-	background-color: #33739E;
-
-	border-radius: 4px;
-
+	background-color: #F2B705;
+	border-radius: 16px;
 	color: #E4EAF2;
-
 	cursor: pointer;
-
 }
 
 
@@ -279,4 +276,81 @@ table.auth_table{
 td.input_data > input{
 	width: 250px;
 	height: 24px;
+}
+
+
+
+
+div.sale_field{
+	height: 150px;
+	width: 100%;
+
+	background-color: #e5e5e5;
+	margin-top: 8px;
+	display: flex;
+	border-radius: 16px;
+}
+
+div.sale_field_left{
+	width: 150px;
+	height: 150px;
+}
+
+img.sale_field_left{
+	width: 120px;
+	height: 120px;
+	margin: 15px;
+}
+
+div.sale_field_about{
+	margin-left: 32px;
+	width: 280px;
+	margin-right: 32px;
+}
+
+div.sale_field_vender{
+	width: 280px;
+}
+
+div.sale_field_final_price{
+	margin-left: 32px;
+	width: 280px;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+div.sale_field_about_field{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 16px;
+	color: #969696;
+
+}
+h1.sale_field_about{
+	margin-top: 16px;
+	text-align: center;
+	color: #232323;
+}
+
+h1.sale_field_vender{
+	margin-top: 16px;
+	text-align: center;
+	color: #232323;
+}
+
+p.sale_field_vender{
+	text-align: center;
+	margin-top: 16px;
+	color: #969696;
+}
+
+div.sign_in_text{
+	height: 80vh;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
