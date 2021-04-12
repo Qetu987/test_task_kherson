@@ -3,7 +3,10 @@
     
 
 {% if user.is_authenticated %}
-    {% for sale in sales %}
+    <div class="page_naw_sales">
+        <h1>Page number: {{ page.number }}</h1>
+    </div>
+    {% for sale in page.object_list %}
         <div class="sale_field">
             <div class="sale_field_left">
                 <a href="{{ sale.item.get_absolute_url }}">
@@ -27,6 +30,16 @@
             </div>
         </div>
     {% endfor %}
+
+    <div class="page_naw_sales">
+        {% if page.has_previous %}
+            <a href="{% url 'sales' %}?page={{ page.previous_page_number }}">previous page</a>
+        {% endif %}
+        {% if page.has_next %}
+            <a href="{% url 'sales' %}?page={{ page.next_page_number }}">next page</a>
+        {% endif %}
+    </div>
+
 {% else %}
     <div class="sign_in_text">
         <h1>Для просмотра продаж, пройдите авторизацию</h1>

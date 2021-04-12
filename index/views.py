@@ -3,6 +3,8 @@ from items.models import Item
 from sales.models import Sale
 from .form import SaleForm
 
+from django.core.paginator import Paginator
+
 
 @render_to('index.html')
 def index(request):
@@ -39,4 +41,11 @@ def item_detail(request, slug):
 @render_to('sales.html')
 def sales(request):
     sales = Sale.objects.all().order_by('-date')
-    return {'sales': sales}
+
+    sales_paginator = Paginator(sales, 5)
+    page_num = request.GET.get('page')
+    page = sales_paginator.get_page(page_num)
+
+    return {
+        'page': page,
+        }
