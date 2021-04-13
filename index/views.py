@@ -1,7 +1,7 @@
 from annoying.decorators import render_to
 from items.models import Item
 from sales.models import Sale
-from .form import SaleForm
+from .form import SaleForm, ItemForm
 import datetime
 from django.http import HttpResponseRedirect
 
@@ -97,19 +97,25 @@ def sales(request):
 """
 
 
+"""
+я очень старался, но я не понял как реализовать изменение цены)
+"""
+
+"""
 @render_to("change.html")
 def change(request, slug):
     item = Item.objects.get(title=slug)
     date_of_gen = datetime.datetime.now()
 
     if request.method == "POST":
-        history_form = SaleForm(data=request.POST)
+        history_form = ItemForm(data=request.POST)
         if history_form.is_valid():
-            new_sale = history_form.save(commit=False)
-            new_sale.item = item
-            new_sale.save()
+            new_change = history_form.save(commit=False)
+            new_change.item = item
+            new_change.save()
 
     else:
         sale_form = SaleForm()
 
-    return {"item": item, "sale_form": sale_form, "date": date_of_gen}
+    return {"item": item, "sale_form": history_form, "date": date_of_gen}
+"""

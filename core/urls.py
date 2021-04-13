@@ -30,6 +30,7 @@ urlpatterns = [
     path("catalog/", include("index.urls")),
     path("accounts/", include("django.contrib.auth.urls")),
     path("sales/", sales, name="sales"),
+    path("change/", include("items.urls")),
 ]
 
 """

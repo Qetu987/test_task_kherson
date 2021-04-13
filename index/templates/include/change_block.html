@@ -1,0 +1,11 @@
+                {% if new_sale %}
+                    <h2>Your item has been added.</h2>
+                {% else %}
+                    {% if user.is_authenticated %}
+                    <form action="/shange/{{item}}" method="post" class="form_item">
+                        {{ sale_form.as_p }}
+                        {% csrf_token %}
+                        <p><input type="submit" value="обновить" class="item_button_buy"></p>
+                    </form>
+                    {% endif %}
+                {% endif %}

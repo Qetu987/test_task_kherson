@@ -18,8 +18,9 @@ class SaleForm(forms.ModelForm):
 форма для изменение цены на товаре
 """
 
-
+"""
 class ItemForm(forms.ModelForm):
     class Meta:
         model = Item
         fields = ("curent_sale",)
+"""
