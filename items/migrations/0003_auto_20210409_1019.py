@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('items', '0002_alter_item_title'),
+        ("items", "0002_alter_item_title"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='item',
-            name='is_first_carusel',
+            model_name="item",
+            name="is_first_carusel",
             field=models.BooleanField(default=False),
         ),
         migrations.AddField(
-            model_name='item',
-            name='is_second_carusel',
+            model_name="item",
+            name="is_second_carusel",
             field=models.BooleanField(default=False),
         ),
     ]

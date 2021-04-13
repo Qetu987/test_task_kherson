@@ -2,6 +2,10 @@ from django.db import models
 from items.models import Item
 from seller.models import User
 
+
+"""
+все наши продажи бегут сюда
+"""
 # Create your models here.
 class Sale(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

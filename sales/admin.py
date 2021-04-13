@@ -2,6 +2,11 @@ from django.contrib import admin
 from .models import Sale
 
 
+"""
+админка для продаж
+"""
+
+
 @admin.register(Sale)
 class ItemAdmin(admin.ModelAdmin):
     list_display = ["id", "user", "item", "count", "date"]

@@ -48,3 +48,9 @@ div.footer_social_media{
 	justify-content: space-between;
 	align-items: center;
 }
+
+h1.date{
+	text-align: center;
+	color:antiquewhite;
+	font-size: 14px;
+}
