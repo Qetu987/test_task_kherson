@@ -1,7 +1,7 @@
 from annoying.decorators import render_to
 from items.models import Item
 from sales.models import Sale
-from .form import SaleForm, ItemForm
+from .form import SaleForm
 import datetime
 from django.http import HttpResponseRedirect
 
