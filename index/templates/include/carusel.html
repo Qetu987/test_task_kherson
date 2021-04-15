@@ -13,9 +13,15 @@
 							<a href="{{ item.get_absolute_url }}">
 								<div class="carusel_item">
 									<div class="carusel_items_field">
-										<div class="carusel_items_photo">
-											<img src="{{item.image.url}}" alt="" class="carusel_items_photo">
-										</div>
+										{% if item.image %}
+											<div class="carusel_items_photo">
+												<img src="{{item.image.url}}" alt="" class="carusel_items_photo">
+											</div>
+										{% else %}
+											<div class="carusel_items_photo">
+												<img src="" alt="фото вышло гулять" class="carusel_items_photo">
+											</div>
+										{% endif %}
 										<div class="carusel_item_desc">
 											<div class="carusel_item_desc_left">
 												<h1 class="carusel_item_desc_title">
@@ -52,9 +58,15 @@
 							<a href="">
 								<div class="carusel_item">
 									<div class="carusel_items_field">
-										<div class="carusel_items_photo">
-											<img src="{{item.image.url}}" alt="" class="carusel_items_photo">
-										</div>
+										{% if item.image %}
+											<div class="carusel_items_photo">
+												<img src="{{item.image.url}}" alt="" class="carusel_items_photo">
+											</div>
+										{% else %}
+											<div class="carusel_items_photo">
+												<img src="" alt="фото вышло гулять" class="carusel_items_photo">
+											</div>
+										{% endif %}
 										<div class="carusel_item_desc">
 											<div class="carusel_item_desc_left">
 												<h1 class="carusel_item_desc_title">
@@ -87,9 +99,15 @@
 							<a href="">
 								<div class="carusel_item">
 									<div class="carusel_items_field">
-										<div class="carusel_items_photo">
-											<img src="{{item.image.url}}" alt="" class="carusel_items_photo">
-										</div>
+										{% if item.image %}
+											<div class="carusel_items_photo">
+												<img src="{{item.image.url}}" alt="" class="carusel_items_photo">
+											</div>
+										{% else %}
+											<div class="carusel_items_photo">
+												<img src="" alt="фото вышло гулять" class="carusel_items_photo">
+											</div>
+										{% endif %}
 										<div class="carusel_item_desc">
 											<div class="carusel_item_desc_left">
 												<h1 class="carusel_item_desc_title">

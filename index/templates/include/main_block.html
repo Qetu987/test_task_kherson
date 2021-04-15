@@ -86,7 +86,11 @@
 							</div>
 						</div>
 						<div class="main_item_of_menu_right">
-							<img src="{{ top_item.image.url }}" alt="item" class="main_item_of_menu_right">
+							{% if item.image %}
+								<img src="{{ top_item.image.url }}" alt="item" class="main_item_of_menu_right">
+							{% else %}
+								<img src="" alt="фото ушло гулять" class="main_item_of_menu_right">
+							{% endif %}
 						</div>
 					</div>
 				</div>
@@ -96,7 +100,11 @@
 					<div class="block_of_menu">
 						<div class="main_item_of_menu">
 							<div class="main_item_of_menu_right">
-								<img src="{% static 'images/item.png' %}" alt="item" class="main_item_of_menu_right">
+								{% if item.image %}
+									<img src="{{ top_item.image.url }}" alt="item" class="main_item_of_menu_right">
+								{% else %}
+									<img src="" alt="фото ушло гулять" class="main_item_of_menu_right">
+								{% endif %}
 							</div>
 							<div class="main_item_of_menu_left">
 								<h1 class="main_item_of_menu_left_title">

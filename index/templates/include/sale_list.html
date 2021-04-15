@@ -10,7 +10,12 @@
         <div class="sale_field">
             <div class="sale_field_left">
                 <a href="{{ sale.item.get_absolute_url }}">
-                    <img src="{{ sale.item.image.url }}" alt="" class="sale_field_left">
+                    {% if item.image %}
+			
+                        <img src="{{ sale.item.image.url }}" alt="" class="sale_field_left">
+                    {% else %}
+                        <img src="" alt="фото" class="sale_field_left">
+                    {% endif %}
                 </a>
             </div>
             <div class="sale_field_about">

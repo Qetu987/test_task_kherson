@@ -25,7 +25,7 @@ from index.views import index, catalog, item_detail, sales
 """
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", index),
+    path("", index, name=''),
     path("catalog/", catalog, name="catalog"),
     path("catalog/", include("index.urls")),
     path("accounts/", include("django.contrib.auth.urls")),

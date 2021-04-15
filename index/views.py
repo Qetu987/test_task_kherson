@@ -2,7 +2,7 @@ from annoying.decorators import render_to
 from items.models import Item
 from sales.models import Sale
 from .form import SaleForm
-import datetime
+
 from django.http import HttpResponseRedirect
 
 from django.core.paginator import Paginator
@@ -19,8 +19,12 @@ from django.core.paginator import Paginator
 def index(request):
     items = Item.objects.all()
     top_item = Item.objects.filter(is_top_item=True)
-    date_of_gen = datetime.datetime.now()
-    return {"items": items, "top_item": top_item[0], "date": date_of_gen}
+    
+    print(len(top_item))
+    if len(top_item) != 0:
+        return {"items": items, "top_item": top_item[0]}
+    else:
+        return {"items": items}
 
 
 """
@@ -33,8 +37,7 @@ def index(request):
 @render_to("catalog.html")
 def catalog(request):
     items = Item.objects.all()
-    date_of_gen = datetime.datetime.now()
-    return {"items": items, "date": date_of_gen}
+    return {"items": items}
 
 
 """
@@ -46,9 +49,8 @@ def catalog(request):
 
 @render_to("item_detail.html")
 def item_detail(request, slug):
-    item = Item.objects.get(title=slug)
+    item = Item.objects.get(id=int(slug))
     items = Item.objects.all()
-    date_of_gen = datetime.datetime.now()
 
     if request.method == "POST":
         sale_form = SaleForm(data=request.POST)
@@ -64,7 +66,6 @@ def item_detail(request, slug):
         "item": item,
         "items": items,
         "sale_form": sale_form,
-        "date": date_of_gen,
     }
 
 
@@ -81,13 +82,12 @@ def item_detail(request, slug):
 @render_to("sales.html")
 def sales(request):
     sales = Sale.objects.all().order_by("-date")
-    date_of_gen = datetime.datetime.now()
 
     sales_paginator = Paginator(sales, 5)
     page_num = request.GET.get("page")
     page = sales_paginator.get_page(page_num)
 
-    return {"page": page, "date": date_of_gen}
+    return {"page": page}
 
 
 """

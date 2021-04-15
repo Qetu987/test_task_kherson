@@ -15,7 +15,6 @@ class ItemAdmin(admin.ModelAdmin):
         "desc",
         "curent_sale",
         "is_active",
-        "image_tag",
         "is_first_carusel",
         "is_second_carusel",
     ]

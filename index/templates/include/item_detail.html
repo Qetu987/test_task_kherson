@@ -3,7 +3,12 @@
 <div class="">
 
     <div class="item_page">
-       <img src="{{item.image.url}}" alt="" class="curent_items_photo"> 
+        {% if item.image %}
+			
+			<img src="{{item.image.url}}" alt="" class="carusel_items_photo">
+		{% else %}
+			<img src="" alt="фото вышло гулять" class="carusel_items_photo">
+        {% endif %}
        <div class="item_info">
             <h1 class="item_info">{{item.title}}</h1>
             <p class="item_info_title">Описание</p>
