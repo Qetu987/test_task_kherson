@@ -27,10 +27,6 @@ class Item(models.Model):
     def get_absolute_url(self):
         return reverse("item_detail", kwargs={"slug": str(self.id)})
 
-    @property
-    def image_tag(self):
-        return mark_safe('<img width="60" src="%s" />' % self.image.url)
-
 
 """
 здесь хранятся наши изменения цен
@@ -46,6 +42,8 @@ class History_of_price(models.Model):
 
 @receiver(post_save, sender=Item)
 def update_item_for_History(sender, instance, **kwargs):
+    last_rec = History_of_price.objects.filter(item=instance).order_by("-date")
+    if len(last_rec) == 0 or last_rec[0].price != instance.curent_sale:
         History_of_price.objects.create(
             item = instance,
             price = instance.curent_sale

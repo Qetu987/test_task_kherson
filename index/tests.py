@@ -1,9 +1,10 @@
 from django.test import TestCase
 import requests
-from items.models import Item
+from items.models import Item, History_of_price
 from sales.models import Sale
 from seller.models import User
 from django.urls import reverse
+
 
 
 # Create your tests here.
@@ -24,7 +25,7 @@ class Path_test(TestCase):
             Item.objects.create(
                 title='item %s' % item_num, 
                 desc = 'Surname %s' % item_num, 
-                curent_sale = True,
+                curent_sale = item_num,
                 is_active = True,
                 is_first_carusel = True,
                 is_second_carusel = True,
@@ -89,4 +90,30 @@ class Path_test(TestCase):
         self.assertEqual(resp.status_code, 200)
         ''' сколько записей отображается на первой странице '''
         self.assertTrue( len(resp.context['page']) == 5)
+
+    def test_item_detale(self):
+        item = Item.objects.get(id=1)
+        self.assertEquals(item.get_absolute_url(),'/catalog/1')
+        resp = self.client.get(item.get_absolute_url())
+        self.assertEqual(resp.status_code, 200)
+
+
+    def test_history_of_price(self):
+        history = History_of_price.objects.all()
+        self.assertTrue( len(history) >= 13)
+
+    
+    def test_test_of_price(self):
+        Item.objects.create(
+                title='item_tets_for_history', 
+                desc = 'Surname', 
+                curent_sale = 222,
+                is_active = True,
+                is_first_carusel = True,
+                is_second_carusel = True,
+                is_top_item = True,
+                )
         
+        item = Item.objects.get(title='item_tets_for_history')
+        history = History_of_price.objects.get(item=item)
+        self.assertTrue( history.price == item.curent_sale)
