@@ -3,6 +3,8 @@ from django.db import models
 from django.utils.safestring import mark_safe
 
 from django.urls import reverse
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 """
@@ -39,3 +41,12 @@ class History_of_price(models.Model):
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
     price = models.CharField(max_length=150)
     date = models.DateTimeField(auto_now_add=True)
+
+
+
+@receiver(post_save, sender=Item)
+def update_item_for_History(sender, instance, **kwargs):
+        History_of_price.objects.create(
+            item = instance,
+            price = instance.curent_sale
+        )
